@@ -115,8 +115,8 @@ class TestimonialBlock(StructBlock):
         label = 'Client Testimonial'
 
 class SlideBlock(StructBlock):
-    title = CharBlock("Title ...", blank=True, max_length=250, classname='col8')
-    classesTitle = CharBlock(label="Title CSS (text-dark etc)", required=False, blank=True, classname='col4')
+    title = CharBlock("Title ...", blank=True, max_length=250)
+    classesTitle = CharBlock(label="Title CSS (text-dark etc)", required=False, blank=True)
     caption = TextBlock(required=False, blank=True)
     classesCaption = CharBlock(label="Caption CSS (text-danger)", required=False, blank=True)
     classes = CharBlock(label="CSS classes (bg-light or bg-dark)", required=False, blank=True)
@@ -134,8 +134,8 @@ class CarouselBlock(StructBlock):
         label = 'Carousel'
 
 class HeroBlock(StructBlock):
-    heading = CharBlock(classname="full title, col8", blank=True)
-    classesHeading = CharBlock(label="Heading CSS (text-dark etc)", required=False, blank=True, classname='col4')
+    heading = CharBlock(classname="full title", blank=True)
+    classesHeading = CharBlock(label="Heading CSS (text-dark etc)", required=False, blank=True)
     text = TextBlock(required=False, blank=True)
     classesText = CharBlock(label="CSS classes for Text (text-success etc)", required=False, blank=True)
     classes = CharBlock(label="CSS classes from BS (bg-light or bg-dark)", required=False, blank=True)
