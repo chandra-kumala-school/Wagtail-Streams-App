@@ -163,6 +163,7 @@ class CommonStreamBlock(StreamBlock):
     card = CardBlock()
     cards = CardGroupBlock()
     carousel = CarouselBlock()
+    button = ButtonBlock()
     buttongroup = ButtonGroupBlock()
     testimonial = TestimonialBlock()
 
