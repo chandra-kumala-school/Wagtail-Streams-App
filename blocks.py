@@ -164,7 +164,7 @@ class CommonStreamBlock(StreamBlock):
     cards = CardGroupBlock()
     carousel = CarouselBlock()
     buttongroup = ButtonGroupBlock()
-    testimonial = TestimonialBlock
+    testimonial = TestimonialBlock()
 
     class Meta:
         icon = 'cogs'
