@@ -1,6 +1,20 @@
-{% load static %}
+{% load static wagtailimages_tags %}
 
-<blockquote class="blockquote">
-    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
+<div class="card mx-auto my-3 text-center stream_item {{ self.block_type }}" style="max-width: 540px;">
+    <div class="row no-gutters {% if self.test_reversed %} flex-md-row-reverse {% else %} flex-md-row {% endif %}">
+      <div class="col-sm-4 mx-auto w-50 w-sm-100">
+        {% image self.test_pic height-200 as photo %}
+        <img src="{{ photo.url }}" class="card-img" alt="{{ photo.alt }}">
+      </div>
+      <div class="col-sm-8 align-self-center">
+        <div class="card-body">
+            <div class="d-flex">
+                <span class="text-dark"><i class="fas fa-quote-left fa-2x"></i></span>
+                <p class="card-text">{{ self.test_quote }}</p>
+                <span class="align-self-end mb-2 text-dark"><i class="fas fa-quote-right fa-2x"></i></span>
+            </div>
+          <h5 class="card-title m-0 signature text-dark">{{ self.test_name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
