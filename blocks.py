@@ -64,7 +64,7 @@ class ButtonBlock(StructBlock):
     pagelink = PageChooserBlock(required=False, label="internal URL", blank=True)
 
     class Meta:
-        # template = "streams/button_block.html"
+        template = "streams/button_block.html"
         icon = 'form'
         label = 'Individual button'
 

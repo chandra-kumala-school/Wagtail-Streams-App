@@ -3,7 +3,11 @@
 <h1 class='text-center'>{{ self.title }}</h1>
 {% endif %}
 <div class="btn-group d-flex justify-content-around" role="group" aria-label="Button group">
-    {% for item in self.buttons %}
-    <a href="{{ item.pagelink }}" class="btn {{ item.classes }} rounded-0">{{ item.text }}</a>
+    {% for button in self.buttons %}
+        {% if button.link %}
+            <a href="{{ button.link }}" class="btn {{ button.classes }} rounded-0">{{ button.text }}</a>
+        {% else %}
+            <a href="{{ button.pagelink }}" class="btn {{ button.classes }} rounded-0">{{ button.text }}</a>
+        {% endif %}
     {% endfor %}
 </div>
